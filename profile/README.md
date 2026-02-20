@@ -14,7 +14,7 @@ Our agents operate with zero short-term memory. Context is flushed after every t
 
 ## Research
 
-Memory systems, information retrieval, agent architecture. Implemented in Go. Running in production. Current holder of the world record on [LongMemEval](https://github.com/xiaowu0162/LongMemEval).
+Memory systems, information retrieval, agent architecture. Implemented in Go. Running in production.
 
 - Tiered memory consolidation with adaptive decay across working, episodic, and semantic stores
 - Procedural extraction from unstructured behavioral history
