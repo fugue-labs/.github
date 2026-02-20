@@ -1,45 +1,32 @@
-# 🧠 Fugue Labs
+# Fugue Labs
 
-**Building the Cognitive Infrastructure for Zero-State Agents.**
-
----
-
-We believe the current trajectory of AI—relying on ever-expanding context windows—is a **structural dead end**. It leads to attention dilution, computational waste, and behavioral drift.
-
-Fugue Labs is engineering the alternative: **Stateful Systems for Stateless Models.**
-
-Our architecture enables agents to operate with **zero short-term memory** (flushing context after every turn) by relying entirely on a high-speed, tiered retrieval backend. We provide the *"Hippocampus"* so the LLM can act as the *"Cortex."*
+**Stateful systems for stateless models.**
 
 ---
 
-## 🔬 Core Research & Architecture
+The current trajectory of AI — scaling context windows indefinitely — is a structural dead end. Attention dilution, computational waste, behavioral drift. These aren't bugs. They're the architecture.
 
-Our systems are built on four fundamental pillars, implemented in high-performance Go:
+We're building the alternative.
 
-- **Tiered Memory Consolidation:** Data decays and evolves across Working, Episodic, and Semantic tiers using Ebbinghaus-inspired forgetting curves (`AdaptiveDecay`).
-- **Procedural Extraction:** We don't just store facts; we extract behavioral patterns (code style, workflows) from unstructured history to enforce agent consistency.
-- **Transitive Entity Resolution:** Custom Hierarchical Agglomerative Clustering (HAC) pipelines to resolve identity variance across massive datasets.
-- **Graph-Augmented Retrieval:** Multi-hop reasoning backed by PostgreSQL and Apache AGE, fused with HNSW vector search via Reciprocal Rank Fusion (RRF).
+Our agents operate with zero short-term memory. Context is flushed after every turn. Continuity comes from a tiered retrieval backend that handles consolidation, decay, and recall — the hippocampus — so the model can function purely as cortex.
 
 ---
 
-## 📦 Open Source
+## Research
 
-We are open-sourcing the execution layer of our architecture.
+Memory systems, information retrieval, agent architecture. Implemented in Go. Running in production.
 
-- **[Gollem](https://github.com/fugue-labs/gollem):** A production-grade, type-safe Go framework for LLM agents. Built for durability, streaming, and strict structured output. *(Includes native [Temporal.io](https://temporal.io) integration for long-running agents).*
-
----
-
-## 🔒 Enterprise Platform *(Private Beta)*
-
-- **Fugue Memory Service (gRPC):** The distributed cognitive backend that powers our agents. Features include Thompson Sampling routing, automatic belief revision, and the "Lazarus" GDPR ingestion pipeline.
-- **Amnesia / Recall:** Our internal zero-state coding agents that interface with the Memory Service.
-
-> *Enterprise access to the Memory Service is currently restricted to design partners.*
+- Tiered memory consolidation with adaptive decay across working, episodic, and semantic stores
+- Procedural extraction from unstructured behavioral history
+- Entity resolution across noisy, high-cardinality datasets
+- Graph-augmented retrieval with hybrid ranking
 
 ---
 
-## ⚡ The Fugue Philosophy
+## Open Source
 
-> *"Infinite context is a crutch for poor retrieval. True intelligence requires the ability to forget."*
+**[Gollem](https://github.com/fugue-labs/gollem)** — Production-grade, type-safe Go framework for LLM agents. Durable execution, streaming, strict structured output. Native [Temporal](https://temporal.io) integration.
+
+---
+
+> *Infinite context is a crutch for poor retrieval. True intelligence requires the ability to forget.*
