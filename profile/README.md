@@ -57,5 +57,3 @@ Memory systems, information retrieval, agent architecture. Implemented in Go. Ru
 - Graph-augmented retrieval with hybrid ranking
 
 ---
-
-> *Infinite context is a crutch for poor retrieval. True intelligence requires the ability to forget.*
